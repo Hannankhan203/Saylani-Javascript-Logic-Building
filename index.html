@@ -4,8 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+        }
+        #task-list{
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            margin: 5px;
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .completed{
+            text-decoration: line-through;
+            color: grey;
+        }
+        button {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+    <h2>Simple To-Do list</h2>
+    <input type="text" id="task-input" placeholder="Enter a tast" /> 
+    <button class="add-btn" onclick="addTask()">Add Task</button>
+    <ul id="task-list"></ul>
     <script src="script.js"></script>
 </body>
 </html>
